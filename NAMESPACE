@@ -1,0 +1,8 @@
+export(IsingFit)
+S3method(plot,IsingFit)
+S3method(print,IsingFit)
+S3method(summary,IsingFit)
+
+import(qgraph)
+import(Matrix)
+import(glmnet)
