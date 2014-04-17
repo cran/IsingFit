@@ -1,12 +1,12 @@
-5963becbfa9b806e3d40b74c19444db3 *DESCRIPTION
+72acfcb89439601dc0b14cb076bba47e *DESCRIPTION
 7c88519aa9767bcfee13db9743bf4b8b *NAMESPACE
-4de925dbde947ca0cb74e3ee80472289 *R/IsingFit.R
-418d0bcb595e3bba3e9c50a547a12385 *R/exporttoNetLogo.IsingFit.R
+84894027c25d135c8a4e3028401fb7f7 *R/IsingFit.R
+dfdb73badfb2cee4ef27cfbe2ac6fa92 *R/exporttoNetLogo.IsingFit.R
 44ee00393dd751ad5139ebfab80aec75 *R/plot.IsingFit.R
 1ed7986d0d0552be3bb9c2b33ba00d74 *R/print.IsingFit.R
 ac29f6c639dd278f1f123f46cfcb444f *R/summary.IsingFit.R
 e19220c9e6eb750f01e81afb209c3a24 *inst/COPYING
 121bcefa9153eaf9ac65ee419f00e3b0 *inst/COPYRIGHTS
-92c10a70afd8a784b224dc24b2d83f4b *man/isingfit-package.rd
-2ca11ff7c511b7fbdf0f2e77f2ae1ee2 *man/isingfit.rd
+8c9db43a4a579d33bec30dc115cbeb68 *man/isingfit-package.rd
+17aa0a0d65ef259175fc9801da367be8 *man/isingfit.rd
 a9ce86743c94f551ce4e6200c17615ab *man/methods.Rd

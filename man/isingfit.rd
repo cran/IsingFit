@@ -4,7 +4,7 @@
 Network estimation using the eLasso method
 }
 \description{
-This network estimation procedure eLasso, which is based on the Ising model, combines l1-regularized logistic regression with model selection based on the Extended Bayesian Information Criterion (EBIC). EBIC is a fit measure that identifies relevant relationships between variables. The resulting network consists of variables as nodes and relevant relationships as edges. Can deal with binary or continuous data.
+This network estimation procedure eLasso, which is based on the Ising model, combines l1-regularized logistic regression with model selection based on the Extended Bayesian Information Criterion (EBIC). EBIC is a fit measure that identifies relevant relationships between variables. The resulting network consists of variables as nodes and relevant relationships as edges. Can deal with binary data.
 }
 \usage{
 IsingFit(x, family='binomial', AND = TRUE, gamma = 0.25, 
@@ -16,7 +16,7 @@ plot = TRUE, progressbar = TRUE, ...)
 Input matrix. The dimension of the matrix is nobs x nvars; each row is a vector of observations of the variables. Must be cross-sectional data.
 }
 \item{family}{
-If 'gaussian' then the data is treated as being continuous. The default is 'binomial', treating the data as binary. Currently, this procedure is only supported for binary or continuous data.
+The default is 'binomial', treating the data as binary. Currently, this procedure is only supported for binary data.
 }
   \item{AND}{
 Logical. Can be TRUE of FALSE to indicate whether the AND-rule or the OR-rule should be used to define the edges in the network. Defaults to TRUE.
@@ -45,10 +45,18 @@ IsingFit returns (invisibly) a 'IsingFit' object that contains the following ite
 \item{time }{The time it took to estimate the network.}
 }
 \references{
-Van Borkulo, C.D., Borsboom, D., Epskamp, S., Blanken, T., Bosschloo, L., Schoevers, R. A., & Waldorp, L. J. (2013). Fitting like a glove: A new method for constructing networks for psychometric data. Manuscript submitted for publication.
+Chen, J., & Chen, Z. (2008). Extended bayesian information criteria for model selection with large model spaces. Biometrika, 95(3), 759-771.
+
+Foygel, R., & Drton, M. (2011). Bayesian model choice and information criteria in sparse generalized linear models. arXiv preprint arXiv:1112.5635.
+
+Ravikumar, P., Wainwright, M. J., & Lafferty, J. D. (2010). High-dimensional Ising model selection using l1-regularized logistic regression. The Annals of Statistics, 38, 1287 - 1319.
+
+Van Borkulo, C. D., Borsboom, D., Epskamp, S., Blanken, T. F., Boschloo, L., Schoevers, R. A., & Waldorp, L. J. (manuscript submitted for publication). A new method for constructing networks from binary data.
 }
 \author{
-Claudia van Borkulo <cvborkulo@gmail.com>
+Claudia D. van Borkulo, Sacha Epskamp, with contributions from Alexander Robitzsch
+
+Maintainer: Claudia D. van Borkulo <cvborkulo@gmail.com>
 }
 \note{
 See also my website: http://cvborkulo.com
@@ -68,7 +76,7 @@ Graph <- pmax(Graph,t(Graph))
 diag(Graph) <- 0
 Thresh <- -rowSums(Graph) / 2
 
-# Siumlate:
+# Simulate:
 Data <- IsingSampler(nSample, Graph, Thresh)
 
 ### Fit using IsingFit ###
