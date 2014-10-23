@@ -8,7 +8,7 @@ This network estimation procedure eLasso, which is based on the Ising model, com
 }
 \usage{
 IsingFit(x, family='binomial', AND = TRUE, gamma = 0.25, 
-plot = TRUE, progressbar = TRUE, ...)
+plot = TRUE, progressbar = TRUE, lowerbound.lambda = NA,...)
 }
 
 \arguments{
@@ -30,6 +30,9 @@ Logical. Should the resulting network be plotted?
   \item{progressbar}{
 Logical. Should the pbar be plotted in order to see the progress of the estimation procedure?
 }
+  \item{lowerbound.lambda}{
+The minimum value of tuning parameter lambda (regularization parameter). Can be used to compare networks that are based on different sample sizes. The lowerbound.lambda is based on the number of observations in the smallest group n: sqrt(log(p)/n). p is the number of variables, that should be the same in both groups. When both networks are estimated with the same lowerbound for lambda (based on the smallest group), the two networks can be directly compared.
+}
 \item{\dots}{
 Arguments sent to \code{qgraph}.
 }
@@ -43,7 +46,10 @@ IsingFit returns (invisibly) a 'IsingFit' object that contains the following ite
 \item{gamma }{The value of hyperparameter gamma.}
 \item{AND }{A logical indicating whether the AND-rule is used or not. If not, the OR-rule is used.}
 \item{time }{The time it took to estimate the network.}
+\item{asymm.weights }{The (asymmetrical) weighted adjacency matrix before applying the AND/OR rule.}
+\item{lambda.values }{The values of the tuning parameter per node that ensured the best fitting set of neighbors.}
 }
+
 \references{
 Chen, J., & Chen, Z. (2008). Extended bayesian information criteria for model selection with large model spaces. Biometrika, 95(3), 759-771.
 
@@ -51,7 +57,7 @@ Foygel, R., & Drton, M. (2011). Bayesian model choice and information criteria i
 
 Ravikumar, P., Wainwright, M. J., & Lafferty, J. D. (2010). High-dimensional Ising model selection using l1-regularized logistic regression. The Annals of Statistics, 38, 1287 - 1319.
 
-Van Borkulo, C. D., Borsboom, D., Epskamp, S., Blanken, T. F., Boschloo, L., Schoevers, R. A., & Waldorp, L. J. (manuscript submitted for publication). A new method for constructing networks from binary data.
+van Borkulo, C. D., Borsboom, D., Epskamp, S., Blanken, T. F., Boschloo, L., Schoevers, R. A., & Waldorp, L. J. (2014). A new method for constructing networks from binary data. Scientific Reports 4, 5918; DOI:10.1038/srep05918. 
 }
 \author{
 Claudia D. van Borkulo, Sacha Epskamp, with contributions from Alexander Robitzsch

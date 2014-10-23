@@ -11,8 +11,8 @@ This network estimation procedure eLasso, which is based on the Ising model, com
 \tabular{ll}{
 Package: \tab IsingFit\cr
 Type: \tab Package\cr
-Version: \tab 0.2.0\cr
-Date: \tab 2014-04-17\cr
+Version: \tab 0.3.0\cr
+Date: \tab 2014-10-23\cr
 License: \tab What license is it under?\cr
 }
 }
@@ -28,7 +28,7 @@ Foygel, R., & Drton, M. (2011). Bayesian model choice and information criteria i
 
 Ravikumar, P., Wainwright, M. J., & Lafferty, J. D. (2010). High-dimensional Ising model selection using l1-regularized logistic regression. The Annals of Statistics, 38, 1287 - 1319.
 
-Van Borkulo, C. D., Borsboom, D., Epskamp, S., Blanken, T. F., Boschloo, L., Schoevers, R. A., & Waldorp, L. J. (manuscript submitted for publication). A new method for constructing networks from binary data.
+van Borkulo, C. D., Borsboom, D., Epskamp, S., Blanken, T. F., Boschloo, L., Schoevers, R. A., & Waldorp, L. J. (2014). A new method for constructing networks from binary data. Scientific Reports 4, 5918; DOI:10.1038/srep05918. 
 }
 % ~~ Optionally other standard keywords, one per line, from file ~~
 % ~~ KEYWORDS in the R documentation directory ~~
